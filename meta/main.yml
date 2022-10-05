@@ -1,0 +1,19 @@
+---
+galaxy_info:
+  role_name: cisco_nxos_vpc
+  standalone: true
+  author: Jørn Ivar Holland
+  description: Configure a pair of Cisco Nexus devices in virtual Port Channel (vPC).
+  license: BSD-3-Clause
+  min_ansible_version: '2.9'
+  platforms:
+    - name: NXOS
+      versions:
+        - all
+  galaxy_tags:
+    - cisco
+    - nexus
+    - vpc
+
+
+dependencies: []
