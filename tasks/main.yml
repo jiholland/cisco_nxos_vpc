@@ -8,7 +8,7 @@
     quiet: true
 
 - name: Enable features for vPC.
-  # noqa no-loop-var-prefix
+  # noqa loop-var-prefix
   cisco.nxos.nxos_feature:
     feature: "{{ item }}"
     state: enabled
