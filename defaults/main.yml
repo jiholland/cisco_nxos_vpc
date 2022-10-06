@@ -1,0 +1,11 @@
+---
+# defaults file for cisco_nxos_vpc
+
+vpc_domain: 1
+
+vpc_peer_portchannel_id: 1
+vpc_peer_portchannel_if_member_1: Ethernet1/53
+vpc_peer_porthcannel_if_member_2: Ethernet1/54
+
+vpc_keepalive_if: Ethernet1/48
+vpc_keepalive_vrf: vpc-keepalive-link

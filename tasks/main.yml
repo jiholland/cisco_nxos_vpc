@@ -57,7 +57,7 @@
     system_priority: 2000
     peer_gw: true
     auto_recovery: true
-    delay_restore: 150
+    delay_restore: "{{ vpc_delay_restore }}"
     state: present
   notify: Save nxos
 
@@ -85,11 +85,11 @@
         description: VPC PEER LINK
         mode: layer2
         enabled: true
-      - name: "{{ vpc_peer_member_1 }}"
+      - name: "{{ vpc_peer_portchannel_if_member_1 }}"
         description: VPC PEER LINK
         mode: layer2
         enabled: true
-      - name: "{{ vpc_peer_member_2 }}"
+      - name: "{{ vpc_peer_portchannel_if_member_2 }}"
         description: VPC PEER LINK
         mode: layer2
         enabled: true
@@ -101,9 +101,9 @@
     config:
       - name: port-channel{{ vpc_peer_portchannel_id }}
         mode: trunk
-      - name: "{{ vpc_peer_member_1 }}"
+      - name: "{{ vpc_peer_portchannel_if_member_1 }}"
         mode: trunk
-      - name: "{{ vpc_peer_member_2 }}"
+      - name: "{{ vpc_peer_portchannel_if_member_2 }}"
         mode: trunk
     state: merged
   notify: Save nxos
@@ -113,9 +113,9 @@
     config:
       - name: port-channel{{ vpc_peer_portchannel_id }}
         members:
-          - member: "{{ vpc_peer_member_1 }}"
+          - member: "{{ vpc_peer_portchannel_if_member_1 }}"
             mode: active  # noqa yaml[truthy]
-          - member: "{{ vpc_peer_member_2 }}"
+          - member: "{{ vpc_peer_portchannel_if_member_2 }}"
             mode: active  # noqa yaml[truthy]
     state: merged
   notify: Save nxos

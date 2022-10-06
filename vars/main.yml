@@ -5,12 +5,5 @@ vpc_features:
   - vpc
   - lacp
 
-vpc_domain: 1
 vpc_role_priority: "{{ ansible_host.split('.') | last }}"
-
-vpc_peer_portchannel_id: 1
-vpc_peer_member_1: Ethernet1/53
-vpc_peer_member_2: Ethernet1/54
-
-vpc_keepalive_if: Ethernet 1/48
-vpc_keepalive_vrf: vpc-keepalive-link
+vpc_delay_restore: 180

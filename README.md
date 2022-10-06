@@ -11,15 +11,17 @@ Requirements
 Role Variables
 --------------
 
+vars/defaults.yml:
+- vpc\_domain
+- vpc\_peer\_portchannel\_id
+- vpc\_peer\_portchannel\_if\_member\_1
+- vpc\_peer\_portchannel\_if\_member\_2
+- vpc\_keepalive\_if
+- vpc\_keepalive\_vrf
+
 vars/main.yml:
 - vpc\_features
 - vpc\_domain
-- vpc\_role\_priority
-- vpc\_peer\_portchannel\_id
-- vpc\_peer\_member\_1
-- vpc\_peer\_member\_2
-- vpc\_keepalive\_if
-- vpc\_keepalive\_vrf
 
 hostvars:
 - vpc\_keepalive\_ip
