@@ -60,10 +60,19 @@
     state: present
   notify: Save nxos
 
+- name: Ensure vPC domain has peer-switch feature to optimize the STP behavior.
+  cisco.nxos.nxos_config:
+    lines:
+      - peer-switch
+    parents:
+      - vpc domain {{ vpc_domain }}
+  notify: Save nxos
+
 - name: Ensure vPC domain has IP ARP synchronize feature enabled.
   cisco.nxos.nxos_config:
     lines:
       - ip arp synchronize
+      - ipv6 nd synchronize
     parents:
       - vpc domain {{ vpc_domain }}
   notify: Save nxos
