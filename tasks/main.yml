@@ -47,7 +47,7 @@
     state: merged
   notify: Save nxos
 
-- name: Configure vPC domain with priority and auto-recovery. Ensure keepalive link is configured with existing keepalive VRF.
+- name: Configure vPC domain with priority and auto-recovery. Ensure keepalive link is configured with existing keepalive VRF. Ensure delay-restore is 150 msec.
   cisco.nxos.nxos_vpc:
     domain: "{{ vpc_domain }}"
     pkl_src: "{{ vpc_keepalive_ip }}"
@@ -57,6 +57,7 @@
     system_priority: 2000
     peer_gw: true
     auto_recovery: true
+    delay_restore: 150
     state: present
   notify: Save nxos
 
