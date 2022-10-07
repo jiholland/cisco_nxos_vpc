@@ -19,10 +19,6 @@ vars/defaults.yml:
 - vpc\_keepalive\_if
 - vpc\_keepalive\_vrf
 
-vars/main.yml:
-- vpc\_features
-- vpc\_domain
-
 hostvars:
 - vpc\_keepalive\_ip
 - vpc\_keepalive\_ip\_peer
