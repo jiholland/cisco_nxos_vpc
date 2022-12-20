@@ -7,3 +7,5 @@ vpc_features:
 
 vpc_role_priority: "{{ ansible_host.split('.') | last }}"
 vpc_delay_restore: 180
+
+vpc_svi_delay_restore: 45

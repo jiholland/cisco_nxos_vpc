@@ -133,3 +133,11 @@
       - spanning-tree vlan 1-3967 forward-time 30
       - spanning-tree vlan 1-3967 max-age 40
   notify: Save nxos
+
+- name: Set delay restore for VLAN SVI.
+  cisco.nxos.nxos_config:
+    lines:
+      - delay restore interface-vlan {{ vpc_svi_delay_restore }}
+    parents:
+      - vpc domain {{ vpc_domain }}
+  notify: Save nxos
