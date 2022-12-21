@@ -18,6 +18,8 @@ vars/defaults.yml:
 - vpc\_peer\_portchannel\_if\_member\_2
 - vpc\_keepalive\_if
 - vpc\_keepalive\_vrf
+- vpc\_delay\_restore
+- vpc\_svi\_delay\_restore
 
 hostvars:
 - vpc\_keepalive\_ip
