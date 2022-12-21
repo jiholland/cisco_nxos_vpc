@@ -6,6 +6,3 @@ vpc_features:
   - lacp
 
 vpc_role_priority: "{{ ansible_host.split('.') | last }}"
-vpc_delay_restore: 150
-
-vpc_svi_delay_restore: 45
