@@ -1,6 +1,6 @@
 ---
 galaxy_info:
-  role_name: cisco_nxos_vpc
+  role_name: cisco_vpc
   standalone: true
   author: Jørn Ivar Holland
   description: Configure a pair of Cisco Nexus devices in virtual Port Channel (vPC).

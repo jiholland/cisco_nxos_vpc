@@ -1,7 +1,7 @@
-👯 cisco\_nxos\_vpc
-===================
+👯 cisco\_vpc
+=============
 
-🪄 Configure a pair of Cisco Nexus devices in virtual Port Channel (vPC).
+Configure a pair of Cisco Nexus devices in virtual Port Channel (vPC).
 
 Requirements
 ------------
